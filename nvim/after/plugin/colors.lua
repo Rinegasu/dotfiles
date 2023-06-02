@@ -13,7 +13,7 @@ colors.setup {
         cmp = true,
         markdown = true,
     },
-    -- transparent_background = vim.g.transparent_enabled,
+    transparent_background = true,
 }
 
 vim.cmd.colorscheme "catppuccin"

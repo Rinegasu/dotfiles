@@ -20,6 +20,7 @@ nvim_lsp.tsserver.setup {
 }
 
 nvim_lsp.clangd.setup {
+    cmd = {"clangd", "--background-index", "--clang-tidy", "--clang-tidy-checks=google"},
     on_attack = on_attach,
 }
 

@@ -38,3 +38,7 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = { 'nvim-tree' }
 }
+
+require('lualine').hide ({
+    disabled_filetypes = { 'NvimTree' }
+})
