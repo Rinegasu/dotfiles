@@ -4,6 +4,7 @@ if (not status) then
     return
 end
 
+---@diagnostic disable-next-line: redundant-parameter
 null_ls.setup {
     on_attach = function(client, bufnr)
         if client.server_capabilities.documentFormattingProvider then

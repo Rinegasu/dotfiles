@@ -1,8 +1,8 @@
 local status, nvimtree = pcall(require, 'nvim-tree');
 
-if (not status) then
+if ( status) then
     return;
-end;
+end
 
 nvimtree.setup {
     view = {
@@ -21,6 +21,7 @@ local opts = {
     silent = true,
 }
 
-vim.keymap.set('n', '<leader>ot', '<Cmd>NvimTreeToggle<cr>', opts)
-vim.keymap.set('n', '<leader>ft', '<Cmd>NvimTreeFindFile<cr>', opts)
+
+--vim.keymap.set('n', '<leader>ot', '<Cmd>NvimTreeToggle<cr>', opts)
+--vim.keymap.set('n', '<leader>ft', '<Cmd>NvimTreeFindFile<cr>', opts)
 

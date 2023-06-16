@@ -33,6 +33,10 @@ return require('packer').startup(function(use)
         "rebelot/kanagawa.nvim",
     })
 
+    use ({
+        "dylanaraps/wal.vim",
+    })
+
     use {
         'xiyaowong/transparent.nvim'
     }
@@ -135,6 +139,15 @@ return require('packer').startup(function(use)
         'nvim-tree/nvim-tree.lua',
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
+
+    use {
+        "nvim-neo-tree/neo-tree.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
         },
     }
 
