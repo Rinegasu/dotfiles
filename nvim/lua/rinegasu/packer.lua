@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
 
     -- Fuzzy Finder
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim',
     }
 
     use {
@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
     }
 
     -- Color scheme
-    use ({
+    use({
         "catppuccin/nvim",
         as = "catppuccin",
         --config = function()
@@ -29,11 +29,7 @@ return require('packer').startup(function(use)
         --end
     })
 
-    use ({
-        "rebelot/kanagawa.nvim",
-    })
-
-    use ({
+    use({
         "dylanaraps/wal.vim",
     })
 
@@ -42,10 +38,9 @@ return require('packer').startup(function(use)
     }
 
     -- Treesitter
-    use ({
+    use {
         'nvim-treesitter/nvim-treesitter',
-        {run = ':TSUpdate'}
-    })
+    }
 
     -- use neovim as a language server to inject LSP diagnostics, code actions and more via Lua
     use {
@@ -57,7 +52,7 @@ return require('packer').startup(function(use)
         'MunifTanjim/prettier.nvim'
     }
 
-    -- for git 
+    -- for git
     use('tpope/vim-fugitive')
 
     -- snippets
@@ -88,12 +83,7 @@ return require('packer').startup(function(use)
         'neovim/nvim-lspconfig',
     }
 
-    -- jdtls
-    use {
-        'mfussenegger/nvim-jdtls'
-    }
-
-    -- status line 
+    -- status line
     use {
         'nvim-lualine/lualine.nvim',
         requires = {
@@ -118,16 +108,16 @@ return require('packer').startup(function(use)
     }
 
     -- LSP UI
-    use ({
+    use({
         "glepnir/lspsaga.nvim",
         branch = "main",
         config = function()
             require("lspsaga").setup({})
         end,
         requires = {
-            {"nvim-tree/nvim-web-devicons"},
+            { "nvim-tree/nvim-web-devicons" },
             --Please make sure you install markdown and markdown_inline parser
-            {"nvim-treesitter/nvim-treesitter"}
+            { "nvim-treesitter/nvim-treesitter" }
         }
     })
 
@@ -140,6 +130,18 @@ return require('packer').startup(function(use)
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional
         },
+    }
+
+    use {
+        'MunifTanjim/nui.nvim',
+    }
+
+    use {
+        'rcarriga/nvim-notify',
+    }
+
+    use {
+        'folke/noice.nvim',
     }
 
     use {
