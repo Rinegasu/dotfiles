@@ -1,4 +1,15 @@
 /*
+
+# neovim config sourced but without lazy-lock.json
 !nvim
+/nvim/lazy-lock.json
+
+# tmux config sourced but without plugins directory
+!tmux
+/tmux/plugins
+
 !hypr
+!eww
+!kitty
+
 !.gitignore
