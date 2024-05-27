@@ -24,7 +24,6 @@ return {
 
         nvim_lsp.intelephense.setup {}
 
-
         nvim_lsp.rust_analyzer.setup {
 
         }
@@ -33,12 +32,12 @@ return {
             cmd = { "clangd", "--background-index", "--clang-tidy", "--clang-tidy-checks=google" },
         }
 
+        local capabilities = vim.lsp.protocol.make_client_capabilities();
+        capabilities.textDocument.completion.completionItem.snippetSupport = true;
+
         nvim_lsp.jdtls.setup {
 
         }
-
-        local capabilities = vim.lsp.protocol.make_client_capabilities();
-        capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
         nvim_lsp.html.setup {
             capabilities = capabilities,

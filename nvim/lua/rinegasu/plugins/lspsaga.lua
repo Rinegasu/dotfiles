@@ -8,7 +8,7 @@ return {
     keys = {
         { '<C-j>',      '<Cmd>Lspsaga diagnostic_jump_next<cr>' },
         { 'K',          '<Cmd>Lspsaga hover_doc<cr>' },
-        { 'gd',         '<Cmd>Lspsaga finder<cr>' },
+        { 'gd',         '<Cmd>Lspsaga goto_definition<cr>' },
         { '<C-k>',      '<Cmd>Lspsaga signature_help<cr>',      'i' },
         { 'gp',         '<Cmd>Lspsaga peek_definition<cr>' },
         { 'n',          '<Cmd>Lspsaga rename<cr>' },
