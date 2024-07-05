@@ -36,17 +36,17 @@ return {
 
             -- load java test plugins
             java_test = {
-                enable = false,
+                enable = true,
             },
 
             -- load java debugger plugins
             java_debug_adapter = {
-                enable = false,
+                enable = true,
             },
 
             jdk = {
                 -- install jdk using mason.nvim
-                auto_install = false,
+                auto_install = true,
             },
 
             notifications = {
@@ -54,5 +54,6 @@ return {
                 dap = false,
             },
         }
+        require('lspconfig').jdtls.setup {}
     end
 }

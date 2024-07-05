@@ -18,6 +18,17 @@ return {
 
         }
 
+        local project_library_path = "/usr/lib/node_modules/@angular/language-server/"
+        local cmd = { "ngserver", "--stdio", "--tsProbeLocations", project_library_path, "--ngProbeLocations",
+            project_library_path }
+
+        nvim_lsp.angularls.setup {
+            cmd = cmd,
+            on_new_config = function(new_config, new_root_dir)
+                new_config.cmd = cmd
+            end,
+        }
+
         nvim_lsp.astro.setup {
 
         }
@@ -35,19 +46,21 @@ return {
         local capabilities = vim.lsp.protocol.make_client_capabilities();
         capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
-        nvim_lsp.jdtls.setup {
-
-        }
-
         nvim_lsp.html.setup {
             capabilities = capabilities,
         }
 
         nvim_lsp.cssls.setup {
             capabilities = capabilities,
+            filetypes = {
+                "css", "scss", "less"
+            }
         }
 
         nvim_lsp.cssmodules_ls.setup {
+            filetypes = {
+                "javascript", "javascriptreact", "typescript", "typescriptreact",
+            }
         }
 
         nvim_lsp.tailwindcss.setup {}
