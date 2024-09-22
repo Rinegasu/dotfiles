@@ -14,7 +14,7 @@ return {
             end
         end
 
-        nvim_lsp.tsserver.setup {
+        nvim_lsp.ts_ls.setup {
 
         }
 
@@ -85,6 +85,14 @@ return {
                     }
                 }
             }
+        }
+
+        nvim_lsp.gopls.setup {
+
+        }
+
+        nvim_lsp.markdown_oxide.setup {
+
         }
     end
 }
