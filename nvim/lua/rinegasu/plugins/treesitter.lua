@@ -2,6 +2,9 @@ return {
     'nvim-treesitter/nvim-treesitter',
     lazy = false,
     config = function()
+        vim.filetype.add({
+            pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+        })
         require 'nvim-treesitter.configs'.setup {
             -- A list of parser names, or "all" (the five listed parsers should always be installed)
             ensure_installed = {
